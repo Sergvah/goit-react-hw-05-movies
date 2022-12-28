@@ -1,0 +1,23 @@
+.movie_search {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.info_block {
+  margin-left: 10px;
+  color: darkolivegreen;
+}
+
+.addi {
+  background-color: antiquewhite;
+  margin-left: 10px;
+  color: darkolivegreen;
+  margin-bottom: 10px;
+}
+.list_actors {
+  list-style: none;
+}
