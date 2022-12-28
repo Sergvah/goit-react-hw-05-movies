@@ -6,6 +6,10 @@
 img {
   margin-top: 10px;
   margin-left: 10px;
+  width: 150px;
+}
+.img_movie_search {
+  width: 300px;
 }
 .info_block {
   margin-left: 10px;

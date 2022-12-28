@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import img from '../services/default.png';
 import { infoActors } from '../services/api';
-import Spinner from './Spinner';
+import Spinner from '../components/Spinner';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
@@ -13,7 +13,8 @@ const Cast = () => {
     setIsLoading(true);
     infoActors(movieId)
       .then(response => setCast(response.data.cast))
-      .catch(error => console.log(error).finally(setIsLoading(false)));
+      .catch(error => console.log(error))
+      .finally(setIsLoading(false));
   }, [cast, movieId]);
 
   if (!cast) {

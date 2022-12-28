@@ -1,14 +1,15 @@
-import { ThreeDots } from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner';
 const Spinner = () => {
-  <ThreeDots
-    height="80"
-    width="80"
-    radius="9"
-    color="#4fa94d"
-    ariaLabel="three-dots-loading"
-    wrapperStyle={{}}
-    wrapperClassName=""
-    visible={true}
-  />;
+  return (
+    <Audio
+      height="100"
+      width="100"
+      color="#4fa94d"
+      ariaLabel="audio-loading"
+      wrapperStyle={{}}
+      wrapperClass="wrapper-class"
+      visible={true}
+    />
+  );
 };
 export default Spinner;

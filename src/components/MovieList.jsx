@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const MovieList = ({ movies }) => {
   const NavItem = styled(NavLink)`
@@ -25,3 +26,7 @@ const MovieList = ({ movies }) => {
   );
 };
 export default MovieList;
+
+MovieList.propTypes = {
+  movies: PropTypes.array.isRequired,
+};

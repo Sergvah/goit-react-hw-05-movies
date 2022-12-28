@@ -78,6 +78,7 @@ const MovieDetails = () => {
       {isLoading && <Spinner />}
       <div>
         <img
+          className={css.img_movie_search}
           src={
             poster_path ? `https://image.tmdb.org/t/p/w300/${poster_path}` : img
           }

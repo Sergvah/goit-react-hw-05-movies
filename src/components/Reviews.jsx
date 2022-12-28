@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { reviewsFilm } from '../services/api';
-import Spinner from './Spinner';
+import Spinner from '../components/Spinner';
 
 const Rewiews = () => {
   const [reviews, setReviews] = useState('');
@@ -12,7 +12,8 @@ const Rewiews = () => {
     setIsLoading(true);
     reviewsFilm(movieId)
       .then(response => setReviews(response.data.results))
-      .catch(error => console.log(error).finally(setIsLoading(false)));
+      .catch(error => console.log(error))
+      .finally(setIsLoading(false));
   }, [reviews, movieId]);
 
   if (!reviews) {
